@@ -1,124 +1,134 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IITWCE</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <figure class="text-center">
-        <blockquote class="blockquote">
-          <p><h1>Campus Energy Monitoring System</h1></p>
-        </blockquote>
-      </figure>
-    <nav
-      class="navbar navbar-expand-lg bg-body-tertiary navbar bg-primary"
-      data-bs-theme="dark"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Menu</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html" >Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://www.walchandsangli.ac.in/">WCESangli</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Overview.html">Overview</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="MicroGrid.html">MicroGrid</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="KeyInfo.html">Key Info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="HistroricalData.html">Historical Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="CaseStudies.html">Case Studies</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li> -->
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <!-- Navbar content -->
-    </nav>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" src=>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
 
-    <nav class="navbar bg-primary" data-bs-theme="dark">
-      <!-- Navbar content -->
-    </nav>
+    </style>
+</head>
+<body>
+   
+    <div class="wrapper">
+       <div class="section">
+		<div class="top_navbar">
+			<div class="hamburger">
+				<a href="#">
+					<i class="fas fa-bars"></i>
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			Smart Energy Monitoring System using NodeMCU
 
-    <nav class="navbar" style="background-color: #e3f2fd">
-      <!-- Navbar content -->
-    </nav>
+In today's energy-conscious world, effectively monitoring and managing consumption is crucial for reducing costs, promoting sustainability, and gaining valuable insights into usage patterns. NodeMCU, a popular and affordable development board, offers a fantastic platform for creating DIY smart energy monitoring systems. This guide outlines the essential components, setup process, and potential applications to empower you to build your own system.
 
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./img/images.jpeg" class="d-block w-100" alt="...">
+Hardware Components:
+
+NodeMCU (ESP8266 Module): The microcontroller heart of your system, responsible for reading energy data, processing it, and transmitting it to a user interface or data storage.
+Energy Metering Sensor: Choose a sensor compatible with your AC or DC voltage and current range, such as the PZEM-004T or ACS712. This sensor accurately measures voltage, current, power, and energy consumption.
+Wi-Fi Module (Optional): If your NodeMCU lacks built-in Wi-Fi, you'll need an external module (e.g., ESP8266) to enable wireless communication with the user interface or cloud storage.
+Power Supply: Choose a suitable power supply (e.g., USB power bank, AC adapter) based on your system's power requirements.
+User Interface (Optional): Consider an LCD display for local data visualization, or a smartphone app or web interface for remote monitoring.
+Software Requirements:
+
+Arduino IDE: The development environment where you'll write and upload code to your NodeMCU.
+NodeMCU Libraries: Download and install libraries specific to your sensor and Wi-Fi module (if applicable) for code compatibility.
+User Interface Framework (Optional): Depending on your user interface choice, you may need additional libraries or software (e.g., Blynk for app development).
+Setup Steps:
+
+Hardware Assembly:
+
+Connect the energy metering sensor to your NodeMCU according to its datasheet (typically SPI or I2C communication).
+If using an external Wi-Fi module, connect it to the designated pins on the NodeMCU.
+Connect the power supply to the NodeMCU.
+If using an LCD display, connect it to the appropriate pins according to its specifications.
+Software Development:
+
+In the Arduino IDE, create a new sketch.
+Include necessary libraries for your sensor and Wi-Fi module.
+Write code to:
+Initialize the sensor and Wi-Fi connection (if applicable).
+Continuously read energy data from the sensor.
+Process the data (e.g., calculate power, energy consumption, and cost).
+Format and transmit the data to the user interface or data storage (e.g., cloud database).
+Upload the code to your NodeMCU.
+User Interface Configuration:
+
+If using an LCD display, create code to display the captured data in a user-friendly format.
+If using a mobile app or web interface, set up the platform and configure it to receive and display data from your NodeMCU.
+		</div>
+	</div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="./img/profile.jpeg" alt="profile_picture">
+                <h3>Mister Lion</h3>
+                <p>Hunter</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="carousel-item">
-          <img src="./img/download.jpeg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./img/download (1).jpeg" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+ 
+</body>
+<script>
+    var hamburger = document.querySelector(".hamburger");
+	hamburger.addEventListener("click", function(){
+		document.querySelector("body").classList.toggle("active");
+	})
+</script>
 </html>
