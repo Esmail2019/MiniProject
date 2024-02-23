@@ -1,18 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <form action="loginpage" method="post">
-        <ul>
-            <li>
-                <label for="Username">Username</label>
-                <input type="text" name="user_name" id="name">
-            </li>
-        </ul>
-    </form>
-</body>
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">User Registration</h1>
+        <p id="description" class="description text-center">
+          Fill out the requirements to register yourself for the WEMS
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="password-label" for="pwd">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            placeholder="Enter your Password"
+            required
+          />
+        </div>
+
+
+        <div class="form-group">
+            <label id="mobile" for="pwd">Phone Number</label>
+            <input
+              type="number"
+              name="mobilenumber"
+              id="number"
+              class="form-control"
+              placeholder="Enter your Mobile Number (+91)"
+              required
+            />
+          </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Faculty</option>
+            <option value="learner">Guest</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Any doubts regarding the process?</p>
+          <textarea
+            id="doubts"
+            class="input-textarea"
+            name="doubts"
+            placeholder="Enter the doubts , you will be contacted through email"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
